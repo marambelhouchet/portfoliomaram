@@ -1,0 +1,96 @@
+.works {
+  position: relative;
+  top: 0;
+  background: #000000;
+
+  &__container {
+    position: relative;
+    top: 0;
+    padding: 2% 5%;
+    color: aliceblue;
+  }
+
+  &__header {
+    position: relative;
+    top: 0;
+    text-align: left;
+    font-family: "RedWingBold";
+    font-weight: 700;
+    color: #212020;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 2em;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0.1em;
+      content: "";
+      width: 10%;
+      height: 0.05em;
+      background-color: #00ffff;
+    }
+
+    h1 {
+      position: relative;
+      color: #ffffff;
+      span {
+        position: relative;
+      }
+    }
+  }
+
+  &__heading {
+    color: #ffffff;
+    h1 {
+      position: relative;
+      display: inline-block;
+      // animation: headingAnimation 2.5s ease-in-out 1;
+      // animation-delay: 0.5s;
+      // animation-fill-mode: forwards;
+    }
+  }
+
+  &__grid {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding-top: 2em;
+  }
+
+  &__grid-container {
+    position: relative;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1040px) {
+    &__grid-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__grid-container {
+      grid-template-columns: 1fr;
+    }
+
+    &__header {
+      font-size: 1.33em;
+    }
+  }
+}
+
+@keyframes headingAnimation {
+  0% {
+    left: 0;
+    font-size: 2em;
+  }
+  100% {
+    left: -43%;
+    font-size: 0.7em;
+    letter-spacing: 0.05em;
+  }
+}

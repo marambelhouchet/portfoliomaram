@@ -1,0 +1,188 @@
+.skill {
+  position: relative;
+  top: 0;
+
+  &__main-container {
+    position: relative;
+    top: 0;
+    padding: 2% 5%;
+    color: #ffffff;
+    margin-top: 2em;
+  }
+
+  &__inner-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__header {
+    position: relative;
+    top: 0;
+    text-align: left;
+    font-family: 'RedWingBold';
+    font-weight: bolder;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 2em;
+    color: #ffffff;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: '';
+      width: 10%;
+      height: 0.05em;
+      background-color: #00ffff;
+    }
+
+    h1 {
+      span {
+        position: relative;
+      }
+    }
+  }
+
+  &__heading {
+    h1 {
+      position: relative;
+      display: inline-block;
+      // animation: headingAnimation 2.5s ease-in-out 1;
+      // animation-delay: 0.5s;
+      // animation-fill-mode: forwards;
+    }
+  }
+
+  @keyframes headingAnimation {
+    0% {
+      left: 0;
+      font-size: 2em;
+    }
+    100% {
+      left: -43%;
+      font-size: 0.7em;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+    }
+  }
+
+  &__info {
+    height: 100%;
+  }
+
+  &__skill-tags {
+    letter-spacing: 0.05em;
+    span {
+      font-family: 'RedWingLight';
+      display: inline-block;
+      padding: 0.2em 1em;
+      border-radius: 0.25em;
+      background-color: #1c1e1e;
+      color: #00ffff;
+    }
+  }
+
+  &__details {
+    margin-top: 1.5em;
+    h4 {
+      font-family: 'RedWingLight';
+      letter-spacing: 0.1em;
+      font-size: 1em;
+      color: #00ffff;
+    }
+
+    ul {
+      list-style-position: inside;
+      margin-top: 0.2em;
+      margin-left: 1.5em;
+      li {
+        letter-spacing: 0.05em;
+        color: #00ffff;
+        list-style-position: outside;
+        span {
+          color: #ffffff;
+          font-family: 'Lato', sans-serif;
+          font-weight: 300;
+          b {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+
+  &__cloud {
+    position: relative;
+    left: -2%;
+
+    .tagcloud {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      font-weight: 300;
+      letter-spacing: 0.0625em;
+      // font-family: 'RedWingBold';
+      font-family: 'RedWingLight';
+      // font-size: 1.3em;
+      font-size: 1em;
+    }
+
+    /* Change color of each text in sphere on hover   */
+    .tagcloud--item {
+      color: #00ffffff;
+      text-transform: uppercase;
+    }
+
+    .tagcloud--item:hover {
+      color: #ff6347;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .tagcloud {
+      font-size: 1em;
+    }
+  }
+
+  @media screen and (max-width: 893px) {
+    &__inner-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__info {
+      order: 2;
+    }
+
+    &__cloud {
+      align-self: center;
+    }
+
+    &__details-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    &__details {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &__header {
+      font-size: 1.33em;
+    }
+  }
+
+  @media screen and (max-width: 538px) {
+    &__details-container {
+      flex-direction: column;
+    }
+    &__details {
+      width: 100%;
+    }
+  }
+}

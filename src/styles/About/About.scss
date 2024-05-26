@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.about {
+  position: relative;
+  top: 0;
+  padding-top: 3em;
+  background-color: #000000;
+
+  &__container {
+    position: relative;
+    top: 0;
+    padding: 2% 5%;
+    color: #ffffff;
+  }
+
+  &__header {
+    position: relative;
+    top: 0;
+    text-align: left;
+    font-family: 'RedWingBold';
+    font-weight: bolder;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 2em;
+    color: #ffffff;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: '';
+      width: 10%;
+      height: 0.05em;
+      background-color: #00ffff;
+    }
+
+    h1 {
+      span {
+        position: relative;
+      }
+    }
+  }
+
+  &__heading {
+    h1 {
+      position: relative;
+      display: inline-block;
+    }
+  }
+
+  @keyframes aboutHeadingAnimation {
+    0% {
+      left: 0;
+      font-size: 2em;
+    }
+    100% {
+      left: -43%;
+      font-size: 0.7em;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+    }
+  }
+
+  &__details-container {
+    position: relative;
+    top: 0;
+    padding: 0 2em;
+    padding-top: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  &__details {
+    position: relative;
+    top: 0;
+    width: 28vw;
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      h1 {
+        position: absolute;
+        top: -0.75em;
+        left: -0.3em;
+        font-family: 'RedWingBold';
+        letter-spacing: 0.1em;
+        font-size: 8em;
+        font-weight: 900;
+        z-index: 1;
+        color: #212020;
+
+        span {
+          -webkit-text-stroke: 1px #212020;
+          color: #000000;
+        }
+      }
+      h2 {
+        position: relative;
+        z-index: 2;
+        font-family: 'RedWingBold';
+        letter-spacing: 0.1em;
+        font-weight: 200;
+        font-size: 2em;
+        color: #ffffff;
+
+        span {
+          color: #000000;
+          -webkit-text-stroke: 1px rgb(249 249 249);
+        }
+
+        span:hover {
+          animation: hoverAnimation 1s ease-in-out;
+          animation-fill-mode: forwards;
+        }
+      }
+
+      p {
+        font-weight: lighter;
+        max-width: 100%;
+        min-width: 16em;
+        position: relative;
+        z-index: 2;
+        padding-right: 3em;
+
+        span:nth-child(1) {
+          font-weight: 400;
+          margin-bottom: 0.3em;
+          display: inline-block;
+        }
+      }
+
+      ul {
+        font-weight: lighter;
+        max-width: 100%;
+        min-width: 16em;
+        position: relative;
+        z-index: 2;
+        padding-right: 3em;
+        li {
+          list-style: none;
+          span {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+
+  &__details:nth-child(even) {
+    margin-top: 15em;
+  }
+
+  @media screen and (max-width: 1179px) {
+    &__details {
+      margin-top: 2em;
+      width: 100%;
+      a {
+        p {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1154px) {
+    &__details-container {
+      overflow-x: scroll;
+      justify-content: unset;
+      padding-bottom: 3em;
+
+      &::-webkit-scrollbar {
+        height: 0.1em;
+        width: 0.1em;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #555555;
+      }
+
+      &::-webkit-scrollbar-thumb:horizontal {
+        background-color: #00ffff;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1179px) {
+    &__details {
+      a {
+        h1 {
+          font-size: 5em;
+        }
+        h2 {
+          font-size: 1.5em;
+        }
+        p {
+          font-size: 0.87em;
+        }
+        ul {
+          font-size: 0.87em;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__header {
+      font-size: 1.33em;
+    }
+  }
+}
+
+@keyframes hoverAnimation {
+  0% {
+    color: #000000;
+  }
+  100% {
+    color: #ffffff;
+  }
+}

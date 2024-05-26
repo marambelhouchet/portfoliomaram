@@ -1,0 +1,68 @@
+// Importing google fonts
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  background: #000000;
+}
+
+// Modifying the browser scroll bar
+body::-webkit-scrollbar {
+  height: 0.15em;
+  width: 0.15em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #0f1b34;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body::-webkit-scrollbar-thumb:vertical {
+  background: #00ffff;
+  border-radius: 10px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+// Importing fonts
+@font-face {
+  font-family: 'RedWingLight';
+  src: local('RedWingLight'),
+    url('./assets/fonts/RedWing/Redwing-Light.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'RedWingBold';
+  src: local('RedWingBold'),
+    url('./assets/fonts/RedWing/Redwing-Medium.otf') format('truetype');
+}
+

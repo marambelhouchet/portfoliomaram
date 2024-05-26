@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+.header {
+  position: relative;
+  top: 0;
+
+  &__container {
+    position: relative;
+    top: 0;
+    padding: 0 10% 1em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #00ffff;
+  }
+
+  &__logo {
+    font-family: 'Sacramento', cursive;
+    color: #00ffff;
+    font-size: 2em;
+    margin-top: 0.5em;
+  }
+
+  &__nav-links {
+    width: fit-content;
+    font-family: 'RedWingLight';
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
+      li {
+        position: relative;
+        list-style: none;
+        cursor: pointer;
+        letter-spacing: 0.1em;
+        height: 4em;
+        text-align: end;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0 0.5em;
+
+        a {
+          text-decoration: none;
+          color: #00ffff;
+        }
+
+        a:hover {
+          color: #ff6347;
+        }
+      }
+
+      .header__nav-links-container {
+        position: relative;
+        top: 0;
+      }
+      .header__nav-links-container:not(:last-child) {
+        margin-right: 1em;
+      }
+    }
+  }
+
+  &__route-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #323232;
+    z-index: -1;
+  }
+
+  &__route-bg-animation {
+    height: 100%;
+    animation: linkBgAnimation 0.5s ease-in-out 1;
+  }
+
+  &__social {
+    display: none;
+  }
+
+  // Hamburger icon styling
+  &__hamburger-icon {
+    position: absolute;
+    top: 1.7em;
+    right: 5%;
+    width: 1.65em;
+    height: 1.2em;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+
+    span {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 0.1em;
+      border-radius: 0.05em;
+      background: #00ffff;
+    }
+  }
+
+  &__icon-line-animate {
+    animation: rotateLine 0.5s linear forwards;
+  }
+
+  &__icon-bottom-line-animate {
+    animation: rotateBottomLine 0.5s linear forwards;
+  }
+
+  @keyframes rotateLine {
+    0% {
+      transform: rotate(0deg);
+      top: 50%;
+    }
+    100% {
+      transform: rotate(45deg);
+      top: 50%;
+    }
+  }
+
+  @keyframes rotateBottomLine {
+    0% {
+      transform: rotate(0deg);
+      bottom: 50%;
+    }
+    100% {
+      transform: rotate(-45deg);
+      bottom: 50%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__nav-links {
+      border: 2px solid red;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: 0;
+      top: 0;
+      z-index: 9;
+      width: 50%;
+      min-width: 20em;
+      height: 90vh;
+      border-bottom-left-radius: 0.5em;
+      background: rgba(0, 0, 0, 0.25);
+      box-shadow: 0 0.5em 2em 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(1.375em);
+      -webkit-backdrop-filter: blur(4px);
+      border: 0.0625em solid rgba(255, 255, 255, 0.18);
+      ul {
+        flex-direction: column;
+        li {
+          height: unset;
+        }
+
+        .header__nav-links-container:not(:last-child) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__nav-links-container {
+      margin-bottom: 2em;
+    }
+
+    &__hamburger-icon {
+      display: flex;
+    }
+
+    #header__nav-links {
+      display: none;
+    }
+
+    &__social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 1em;
+      p {
+        a {
+          svg {
+            font-size: 1.3em;
+            color: #ffffff;
+          }
+        }
+      }
+
+      p:not(:last-child) {
+        margin-right: 1em;
+      }
+    }
+
+    &__linkedin {
+      a {
+        svg:hover {
+          color: #0072b1;
+        }
+      }
+    }
+
+    &__github {
+      a {
+        svg:hover {
+          color: #00ffff;
+        }
+      }
+    }
+
+    &__youtube {
+      a {
+        svg:hover {
+          color: #ff0000;
+        }
+      }
+    }
+  }
+}
+
+@keyframes linkBgAnimation {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}

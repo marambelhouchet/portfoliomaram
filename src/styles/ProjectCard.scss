@@ -1,0 +1,201 @@
+.project-card {
+  border-radius: 0.5em;
+  padding: 0.5em 0.8em;
+  border-top: 0.1em solid #00ffff;
+  margin-bottom: 4em;
+  margin: 1em;
+  height: fit-content;
+  background: linear-gradient(167deg, #000000 21%, #273a3a);
+
+  &:nth-child(1) {
+    .project-card__description-content {
+      a {
+        background: #00ffff;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    border-color: #ffa500;
+
+    .project-card__description-content {
+      a {
+        background: #ffa500;
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    border-color: #5ced73;
+
+    .project-card__description-content {
+      a {
+        background: #5ced73;
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    border-color: #b19cd9;
+
+    .project-card__description-content {
+      a {
+        background: #b19cd9;
+      }
+    }
+  }
+
+  &:nth-child(5) {
+    border-color: #ff6347;
+
+    .project-card__description-content {
+      a {
+        background: #ff6347;
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+    top: 0;
+  }
+
+  &__description-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    line-height: 1.5;
+
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      color: #000000;
+      width: 100%;
+      padding: 0.5em 0;
+      font-weight: 600;
+      margin: 0 auto;
+      border-radius: 0.5em;
+      margin-top: 1em;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__header {
+      padding: 0.5em 0;
+
+      h3 {
+        font-size: 1em;
+      }
+    }
+
+    &__header:after {
+      width: 1em;
+      height: 1em;
+    }
+
+    &__header--expanded:after {
+      width: 1em;
+      height: 1em;
+    }
+
+    &__description {
+      font-size: 0.87em;
+    }
+
+    &__description-content {
+      a {
+        font-size: 0.87em;
+        padding: 0.3em 0;
+      }
+    }
+  }
+}
+
+@keyframes cardAnimation {
+  0% {
+    padding: 1em 0;
+  }
+  50% {
+    transform: scale(10, 5);
+  }
+  100% {
+    padding: 0;
+  }
+}
+
+// Styling Collapsible bars
+.Collapsible {
+  font-family: 'RedWingBold';
+
+  &__trigger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 1em 0;
+    position: relative;
+    z-index: 2;
+    font-size: 1.33em;
+    padding-right: 1em;
+  }
+
+  .is-closed:after {
+    content: '';
+    background-image: url('../assets/images/icons/angle-down.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.5em;
+    height: 1.5em;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+  }
+
+  .is-open:after {
+    content: '';
+    background-image: url('../assets/images/icons/angle-down.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.5em;
+    height: 1.5em;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(180deg);
+    background-position: center;
+  }
+
+  &__contentInner {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+  }
+
+  @media screen and (max-width: 768px) {
+    &__trigger {
+      padding: 0.5em 0;
+      font-size: 1em;
+    }
+
+    &__contentInner {
+      font-size: 0.875em;
+    }
+
+    .is-closed:after {
+      width: 1em;
+      height: 1em;
+    }
+
+    .is-open:after {
+      width: 1em;
+      height: 1em;
+    }
+  }
+}

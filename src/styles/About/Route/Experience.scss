@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.experience {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+
+  &__container {
+    position: relative;
+    top: 0;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__header {
+    font-family: 'RedWingBold';
+
+    h2 {
+      margin-top: 5%;
+      margin-left: 5%;
+      letter-spacing: 0.1em;
+      font-size: 8em;
+      font-weight: 900;
+      z-index: 1;
+      color: #212020;
+
+      span {
+        -webkit-text-stroke: 1px #212020;
+        color: #000000;
+      }
+    }
+
+    h1 {
+      font-size: 9vw;
+      color: #ffffffe8;
+      margin-left: 9%;
+      margin-top: -15%;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &__description {
+    position: relative;
+    padding-top: 10%;
+    margin-left: 5%;
+    color: #ffffff;
+    font-weight: lighter;
+    max-width: 50vw;
+    padding-right: 5%;
+    line-height: 1.5;
+  }
+
+  &__main-box {
+    max-height: 60vh;
+    overflow-y: scroll;
+    padding-left: 2em;
+    padding-right: 5%;
+  }
+
+  &__main-box::-webkit-scrollbar {
+    height: 0.15em;
+    width: 0.15em;
+  }
+
+  /* Track */
+  &__main-box::-webkit-scrollbar-track {
+    background: #ffffffb5;
+  }
+
+  /* Handle */
+  &__main-box::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  &__main-box::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  &__main-box::-webkit-scrollbar-thumb:vertical {
+    background: #00ffff;
+    border-radius: 10px;
+  }
+
+  &__box {
+    margin-bottom: 3em;
+    h2 {
+      font-family: 'RedWingLight';
+      letter-spacing: 0.1em;
+    }
+    h3 {
+      font-family: 'RedWingLight';
+      font-weight: 400;
+    }
+
+    ul {
+      margin-top: 1em;
+      p {
+        margin-bottom: 0.5em;
+      }
+
+      li {
+        color: #00ffff;
+        margin-bottom: 0.5em;
+        span {
+          color: #ffffff;
+        }
+        span:empty {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__box:nth-child(3) {
+    ul {
+      li:nth-child(n + 3) {
+        display: none;
+      }
+    }
+  }
+
+  &__calendar {
+    color: #00ffff;
+  }
+
+  @media screen and (max-width: 998px) {
+    &__container {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &__header {
+      h2 {
+        font-size: 5em;
+        margin-left: 0;
+      }
+
+      h1 {
+        font-size: 5em;
+        margin-left: 3%;
+      }
+    }
+
+    &__main-box {
+      padding-left: 0;
+    }
+
+    &__box ul {
+      list-style-position: inside;
+    }
+
+    &__description {
+      padding-top: 3%;
+      margin-top: 4em;
+      margin-left: 0;
+      padding-right: 0;
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 698px) {
+    &__header {
+      h1 {
+        margin-top: -1em;
+        font-size: 3.5em;
+      }
+    }
+
+    &__box {
+      h2 {
+        font-size: 1.3em;
+      }
+      h3 {
+        font-size: 1em;
+      }
+    }
+  }
+}
