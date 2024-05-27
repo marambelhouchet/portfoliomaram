@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.dbcf034b.css",
-    "main.js": "/static/js/main.d5b2edd7.js",
-    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "main.js": "/static/js/main.b24a6fa6.js",
+    "static/js/488.a0150094.chunk.js": "/static/js/488.a0150094.chunk.js",
     "static/media/image.png": "/static/media/image.ff0c995cd1edb4275a08.png",
     "static/media/Redwing-Medium.otf": "/static/media/Redwing-Medium.7402d4c764b8807db59b.otf",
     "static/media/Redwing-Light.otf": "/static/media/Redwing-Light.bda278368d19c572f2f2.otf",
@@ -10,11 +10,11 @@
     "static/media/angle-down.svg": "/static/media/angle-down.11e201872eb97a54f0d3.svg",
     "static/media/triangle.svg": "/static/media/triangle.5172a3481a7112a7a103.svg",
     "main.dbcf034b.css.map": "/static/css/main.dbcf034b.css.map",
-    "main.d5b2edd7.js.map": "/static/js/main.d5b2edd7.js.map",
-    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
+    "main.b24a6fa6.js.map": "/static/js/main.b24a6fa6.js.map",
+    "488.a0150094.chunk.js.map": "/static/js/488.a0150094.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dbcf034b.css",
-    "static/js/main.d5b2edd7.js"
+    "static/js/main.b24a6fa6.js"
   ]
 }
